@@ -35,14 +35,14 @@ class MovieLens1M(torch.utils.data.Dataset):
     
     def __len__(self):
         """
-        Overwriting
+        Overriding
         """
         
         return self.targets.shape[0]
     
     def __getitem__(self, index):
         """
-        Overwriting
+        Overriding
         """
         
         return self.items[index], self.targets[index]
