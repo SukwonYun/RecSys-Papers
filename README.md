@@ -21,7 +21,7 @@ Build Recommender Systems using Graph Embedding Methodology
 | 2012 | [BPR: Bayesian Personalized Ranking from Implicit Feedback](https://github.com/SukwonYun/RecSys-Papers/files/5835858/BPR.pdf)| [Presentation](https://github.com/SukwonYun/RecSys-Papers/files/5835867/BPR_Sukwon.Yun.pdf) | BPR
 | 2017 | [Collaborative Metric Learning](https://github.com/SukwonYun/RecSys-Papers/files/5835860/CML.pdf)| | CML
 | 2017 | [Neural Collaborative Filtering](https://github.com/SukwonYun/RecSys-Papers/files/5835857/NCF.pdf)| | NCF
-| 2015 | [AutoRec: Autoencoders Meet Collaborative Filtering](https://github.com/SukwonYun/RecSys-Papers/files/5835876/Autorec.pdf)| | Autore
+| 2015 | [AutoRec: Autoencoders Meet Collaborative Filtering](https://github.com/SukwonYun/RecSys-Papers/files/5835876/Autorec.pdf)| | Autorec
 | 2015 | [Collaborative Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835846/CDL.pdf)| | CDL
 | 2010 | [Factorization Machines](https://github.com/SukwonYun/RecSys-Papers/files/5835853/FM.pdf)| | [FM](https://github.com/SukwonYun/RecSys-Papers/tree/master/FM)
 | 2016 | [Wide & Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835879/wide.deep.pdf)| | WD
