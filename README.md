@@ -1,4 +1,13 @@
-## Implementation of RecSys papers
+# Implementation of Recommender Systems Papers
+## Laborartory  
+* Data Science and Artificial Intelligence Laboratory [DSAIL](http://dsail.kaist.ac.kr)
+
+## Subject  
+Recommender System, Graph Embedding  
+![image](https://user-images.githubusercontent.com/68312164/103968901-1abece80-51a8-11eb-9f6b-1fab04c65bbe.png)  
+
+## Objective  
+Construct the Recommender Systems Using Graph Embedding Methodology   
 
 ## Models
 
@@ -17,3 +26,10 @@
 | 2016 | [Wide & Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835879/wide.deep.pdf)| | WD
 | 2008 | [SoRec: Social Recommendation Using Probabilistic Matrix Factorization](https://github.com/SukwonYun/RecSys-Papers/files/5835855/SoRec.pdf)| | SoRec
 | 2011 | [Recommender Systems with Social Regularization](https://github.com/SukwonYun/RecSys-Papers/files/5835854/SoReg.pdf)| | SoReg
+
+## Library Or Useful Resource  
+* [Recommender System](https://github.com/jihoo-kim/awesome-RecSys)  
+* [Library of Analyzing The Netflix Data(Surprise)](https://github.com/NicolasHug/Surprise)  
+* [GNN Paper](https://github.com/thunlp/GNNPapers)  
+* [NRL Paper](https://github.com/thunlp/NRLPapers)  
+* [Library of Graph](https://pytorch-geometric.readthedocs.io/en/latest/)
