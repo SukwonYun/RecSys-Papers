@@ -76,6 +76,7 @@ def train(model, optimizer, data_loader, criterion, device, log_interval = 100):
     model.train()
     total_loss = 0
     tk0 = tqdm.tqdm(data_loader, smoothing = 0, mininterval = 1.0)
+    
     for i, (fields, target) in enumerate(tk0):
         fields, target = fields.to(device), target.to(device)
         y = model(fields)
@@ -84,6 +85,7 @@ def train(model, optimizer, data_loader, criterion, device, log_interval = 100):
         loss.backward()
         optimizer.step()
         total_loss += loss.item()
+        
         if (i+1) % log_interval == 0:
             tk0.set_postfix(loss = total_loss / log_interval)
             total_loss = 0
@@ -91,6 +93,7 @@ def train(model, optimizer, data_loader, criterion, device, log_interval = 100):
 def test(model, data_loader, device):
     model.eval()
     targets, predicts = list(), list()
+    
     with  torch.no_grad():
         for fields, target in tqdm.tqdm(data_loader, smoothing = 0, mininterval = 1.0):
             fields, target = fields.to(device), target.to(device)
@@ -114,7 +117,6 @@ def main(dataset_name,
     dataset = MovieLens1M(Path('.')/'ml-1m'/'ratings.dat')
     field_dims = dataset.field_dims
 
-    
     train_length = int(len(dataset) * 0.8)
     valid_length = int(len(dataset) * 0.1)
     test_length = len(dataset) - train_length - valid_length
