@@ -1,13 +1,14 @@
 # Implementation of Recommender Systems Papers
+
 ## Laborartory  
-* Data Science and Artificial Intelligence Laboratory [DSAIL](http://dsail.kaist.ac.kr)
+* Data Science and Artificial Intelligence Laboratory, [Homepage](http://dsail.kaist.ac.kr)
 
 ## Subject  
 Recommender System, Graph Embedding  
 ![image](https://user-images.githubusercontent.com/68312164/103968901-1abece80-51a8-11eb-9f6b-1fab04c65bbe.png)  
 
 ## Objective  
-Construct the Recommender Systems Using Graph Embedding Methodology   
+Build Recommender Systems using Graph Embedding Methodology   
 
 ## Models
 
@@ -27,7 +28,7 @@ Construct the Recommender Systems Using Graph Embedding Methodology
 | 2008 | [SoRec: Social Recommendation Using Probabilistic Matrix Factorization](https://github.com/SukwonYun/RecSys-Papers/files/5835855/SoRec.pdf)| | SoRec
 | 2011 | [Recommender Systems with Social Regularization](https://github.com/SukwonYun/RecSys-Papers/files/5835854/SoReg.pdf)| | SoReg
 
-## Library Or Useful Resource  
+## Library or Useful Resources  
 * [Recommender System](https://github.com/jihoo-kim/awesome-RecSys)  
 * [Library of Analyzing The Netflix Data(Surprise)](https://github.com/NicolasHug/Surprise)  
 * [GNN Paper](https://github.com/thunlp/GNNPapers)  
