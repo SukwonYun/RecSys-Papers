@@ -47,6 +47,7 @@ class MovieLens1M(torch.utils.data.Dataset):
         
         return self.items[index], self.targets[index]
 
+    
 class EarlyStopper(object):
     
     def __init__(self, num_trials, save_path):
@@ -103,7 +104,7 @@ def test(model, data_loader, device):
         
         return roc_auc_score(targets, predicts)
     
-
+    
 def main(dataset_name,
         epoch,
         learning_rate,
