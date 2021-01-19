@@ -23,5 +23,5 @@ class FM(torch.nn.Module):
         
         x = self.linear(x) + self.fm(self.embedding(x))
         
-        return torch.sigmoid(x.squeeze(1)) #exclude 1 in shape (ax1xb) -> (axb)
+        return torch.sigmoid(x.squeeze(1)) #exclude 1 in shape (ax1) -> (a)
 

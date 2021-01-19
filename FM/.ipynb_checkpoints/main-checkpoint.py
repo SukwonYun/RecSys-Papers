@@ -156,7 +156,7 @@ if __name__ == '__main__':
     parser.add_argument('--epoch', type=int, default=5)
     parser.add_argument('--learning_rate', type=float, default=0.001)
     parser.add_argument('--batch_size', type=int, default=2048)
-    parser.add_argument('--weight_decay', type=float, default=1e-6)
+    parser.add_argument('--weight_decay', type=float, default=1e-6) #lambda
     parser.add_argument('--device', default='cuda:0')
     parser.add_argument('--save_dir', default='FM-checkpoint')
     args = parser.parse_args()

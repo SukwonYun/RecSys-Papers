@@ -32,8 +32,12 @@ class FeaturesEmbedding(torch.nn.Module):
     
     def __init__(self, field_dims, embed_dim):
         super().__init__()
+        
         self.embedding = torch.nn.Embedding(sum(field_dims), embed_dim)
-        self.offsets = np.array((0,*np.cumsum(field_dims)[:-1]), dtype =np.long) #cumulative sum
+        
+        #Starting point of each field
+        self.offsets = np.array((0,*np.cumsum(field_dims)[:-1]), dtype =np.long) 
+        
         torch.nn.init.xavier_uniform_(self.embedding.weight.data)
         
     def forward(self, x):
@@ -43,7 +47,7 @@ class FeaturesEmbedding(torch.nn.Module):
         x : Long tensor of size (btach_size, num_fields)
         
         """
-        
+        #new_tensor enables locating x in same gpu
         x = x + x.new_tensor(self.offsets).unsqueeze(0)
         
         return self.embedding(x)
@@ -63,7 +67,7 @@ class FeaturesLinear(torch.nn.Module):
         x : Long tensor of size (batch_size, num_fields)
         
         """
-        
+        #new_tensor enables locating x in same gpu
         x = x + x.new_tensor(self.offsets).unsqueeze(0)
         
         return torch.sum(self.fc(x), dim = 1) + self.bias
