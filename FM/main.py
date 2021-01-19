@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[11]:
-
 
 import numpy as np
 import pandas as pd
@@ -12,18 +10,13 @@ from sklearn.metrics import roc_auc_score
 from torch.utils.data import DataLoader
 from pathlib import Path
 
-# In[19]:
-
 from fm import FM
-
-
-# In[7]:
 
 
 class MovieLens1M(torch.utils.data.Dataset):
     """
     MovieLens 1M Dataset
-    Treat as negative samples when rating is less than 3
+    Treat negative samples when rating is less than 3
     """
     
     def __init__(self, dataset_path, sep='::', engine = 'python', header = None):
@@ -31,46 +24,28 @@ class MovieLens1M(torch.utils.data.Dataset):
         self.items = data[:, :2].astype(np.int) - 1 #since index starts from 0
         self.targets = self.__preprocess_target(data[:,2]).astype(np.float32)
         self.field_dims = np.max(self.items, axis = 0) + 1
-        self.user_field_idx = np.array((0, ), dtype = np.long)
-        self.item_field_idx = np.array((1, ), dtype = np.long)
-        
-    def __len__(self):
-        return self.targets.shape[0]
-    
-    def __getitem__(self, index):
-        return self.items[index], self.targets[index]
+        #self.user_field_idx = np.array((0, ), dtype = np.long)
+        #self.item_field_idx = np.array((1, ), dtype = np.long)  
     
     def __preprocess_target(self, target):
         target[target <= 3] = 0
         target[target > 3] = 1
         
         return target
-
-
-# In[20]:
-
-
-def get_dataset(name, path):
-    if name == 'movielens1M':
-        return MovieLens1M(path)
-    else:
-        raise ValueError('unknown dataset name: ' + name)
-
-def get_model(name,dataset):
-    """
-    Hyperparameters are empirically determined
-    """
     
-    field_dims = dataset.field_dims
+    def __len__(self):
+        """
+        Overwriting
+        """
+        
+        return self.targets.shape[0]
     
-    if name == 'fm':
-        return FM(field_dims, embed_dim=16)
-    else:
-        raise ValueError('unknown dataset name: ' + name)
-
-
-# In[21]:
-
+    def __getitem__(self, index):
+        """
+        Overwriting
+        """
+        
+        return self.items[index], self.targets[index]
 
 class EarlyStopper(object):
     
@@ -96,10 +71,6 @@ class EarlyStopper(object):
         else:
             return False
         
-
-
-# In[24]:
-
 
 def train(model, optimizer, data_loader, criterion, device, log_interval = 100):
     model.train()
@@ -130,40 +101,44 @@ def test(model, data_loader, device):
         return roc_auc_score(targets, predicts)
     
 
-
-# In[25]:
-
-
 def main(dataset_name,
-        dataset_path,
-        model_name,
         epoch,
         learning_rate,
         batch_size,
         weight_decay,
         device,
         save_dir):
+    
     device = torch.device(device)
-    dataset = get_dataset(dataset_name, Path('.')/'ml-1m'/'ratings.dat')
+    
+    dataset = MovieLens1M(Path('.')/'ml-1m'/'ratings.dat')
+    field_dims = dataset.field_dims
+
+    
     train_length = int(len(dataset) * 0.8)
     valid_length = int(len(dataset) * 0.1)
     test_length = len(dataset) - train_length - valid_length
+    
+    #randomly split train/valid/test sets based on their lengths
     train_dataset, valid_dataset, test_dataset = torch.utils.data.random_split(
         dataset, (train_length, valid_length, test_length))
     
-    train_data_loader = DataLoader(train_dataset, batch_size = batch_size, num_workers=8)
-    valid_data_loader = DataLoader(valid_dataset, batch_size = batch_size, num_workers=8)
-    test_data_loader = DataLoader(test_dataset, batch_size = batch_size, num_workers=8)
+    #DataLoader enables new combination of batches in each epoch
+    train_data_loader = DataLoader(train_dataset, batch_size = batch_size)
+    valid_data_loader = DataLoader(valid_dataset, batch_size = batch_size)
+    test_data_loader = DataLoader(test_dataset, batch_size = batch_size)
     
-    model = get_model(model_name, dataset).to(device)
+    model = FM(field_dims, embed_dim=16).to(device)
+    
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     early_stopper = EarlyStopper(num_trials=2, save_path=f'{save_dir}.pt')
     
-    for epoch_i in range(epoch):
+    for i in range(epoch):
         train(model, optimizer, train_data_loader, criterion, device)
         auc = test(model, valid_data_loader, device)
-        print('epoch:', epoch_i, 'auc', auc)
+        print('epoch:', i, 'auc', auc)
+        
         if not early_stopper.is_continuable(model,auc):
             print(f'validation best auc: {early_stopper.best_accuracy}')
             break
@@ -172,36 +147,27 @@ def main(dataset_name,
         print(f'test auc: {auc}')
     
 
-
-# In[27]:
-
-
 if __name__ == '__main__':
+    
     import argparse
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name', default='movielens1M')
-    parser.add_argument('--dataset_path', help='/ml-1m/ratings.dat')
-    parser.add_argument('--model_name', default='fm')
-    parser.add_argument('--epoch', type=int, default=100)
+    parser.add_argument('--epoch', type=int, default=5)
     parser.add_argument('--learning_rate', type=float, default=0.001)
     parser.add_argument('--batch_size', type=int, default=2048)
     parser.add_argument('--weight_decay', type=float, default=1e-6)
     parser.add_argument('--device', default='cuda:0')
     parser.add_argument('--save_dir', default='FM-checkpoint')
     args = parser.parse_args()
+    
     main(args.dataset_name,
-         args.dataset_path,
-         args.model_name,
          args.epoch,
          args.learning_rate,
          args.batch_size,
          args.weight_decay,
          args.device,
          args.save_dir)
-
-
-# In[ ]:
 
 
 
