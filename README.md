@@ -24,7 +24,7 @@ Build Recommender Systems using Graph Embedding Methodology
 | 2015 | [AutoRec: Autoencoders Meet Collaborative Filtering](https://github.com/SukwonYun/RecSys-Papers/files/5835876/Autorec.pdf)| | Autorec
 | 2015 | [Collaborative Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835846/CDL.pdf)| | CDL
 | 2010 | [Factorization Machines](https://github.com/SukwonYun/RecSys-Papers/files/5835853/FM.pdf)| | [FM](https://github.com/SukwonYun/RecSys-Papers/tree/master/FM)
-| 2016 | [Wide & Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835879/wide.deep.pdf)| | WD
+| 2016 | [Wide & Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835879/wide.deep.pdf)| [Suk's](https://sukwonyun.github.io/recommendersystem/WideDeep/) | WD
 | 2008 | [SoRec: Social Recommendation Using Probabilistic Matrix Factorization](https://github.com/SukwonYun/RecSys-Papers/files/5835855/SoRec.pdf)| | SoRec
 | 2011 | [Recommender Systems with Social Regularization](https://github.com/SukwonYun/RecSys-Papers/files/5835854/SoReg.pdf)| | SoReg
 
