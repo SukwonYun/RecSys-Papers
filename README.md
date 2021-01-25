@@ -27,6 +27,19 @@ Build Recommender Systems using Graph Embedding Methodology
 | 2016 | [Wide & Deep Learning for Recommender Systems](https://github.com/SukwonYun/RecSys-Papers/files/5835879/wide.deep.pdf)| [Suk's](https://sukwonyun.github.io/recommendersystem/WideDeep/) | WD
 | 2008 | [SoRec: Social Recommendation Using Probabilistic Matrix Factorization](https://github.com/SukwonYun/RecSys-Papers/files/5835855/SoRec.pdf)| | SoRec
 | 2011 | [Recommender Systems with Social Regularization](https://github.com/SukwonYun/RecSys-Papers/files/5835854/SoReg.pdf)| | SoReg
+| 2016 | [Deep Neural Networks for YouTube Recommendations](https://github.com/SukwonYun/RecSys-Papers/files/5865100/Youtube.pdf)| | Youtube
+| 2014 | [DeepWalk: Online Learning of Social Representations](https://github.com/SukwonYun/RecSys-Papers/files/5865103/Deepwalk.pdf)| | Deepwalk
+| 2016 | [node2vec: Scalable Feature Learning for Networks](https://github.com/SukwonYun/RecSys-Papers/files/5865104/node2vec.pdf)| | node2vec
+| 2016 | [SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS](https://github.com/SukwonYun/RecSys-Papers/files/5865106/GCN.pdf)| | [GCN](https://github.com/SukwonYun/RecSys-Papers/tree/master/GCN)
+| 2017 | [GRAPH ATTENTION NETWORKS](https://github.com/SukwonYun/RecSys-Papers/files/5865107/GAT.pdf)| | GAT
+| 2015 | [LINE: Large-scale Information Network Embedding](https://github.com/SukwonYun/RecSys-Papers/files/5865108/LINE.pdf)| | LINE
+| 2017 | [metapath2vec: Scalable Representation Learning for Heterogeneous Networks](https://github.com/SukwonYun/RecSys-Papers/files/5865109/metapath2vec.pdf)| | metapath2vec
+| 2019 | [DEEP GRAPH INFOMAX](https://github.com/SukwonYun/RecSys-Papers/files/5865110/DGI.pdf)| | DGI
+| 2017 | [Inductive Representation Learning on Large Graphs](https://github.com/SukwonYun/RecSys-Papers/files/5865113/GraphSAGE.pdf)| | GraphSAGE
+| 2013 | [Auto-Encoding Variational Bayes](https://github.com/SukwonYun/RecSys-Papers/files/5865115/VAE.pdf)| | VAE
+| 2016 | [Variational Graph Auto-Encoders](https://github.com/SukwonYun/RecSys-Papers/files/5865116/GVAE.pdf)| | GVAE
+
+
 
 ## Library or Useful Resources  
 * [Recommender System](https://github.com/jihoo-kim/awesome-RecSys)  
