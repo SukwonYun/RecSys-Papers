@@ -31,7 +31,7 @@ Build Recommender Systems using Graph Embedding Methodology
 | 2014 | [DeepWalk: Online Learning of Social Representations](https://github.com/SukwonYun/RecSys-Papers/files/5865103/Deepwalk.pdf)| | Deepwalk
 | 2016 | [node2vec: Scalable Feature Learning for Networks](https://github.com/SukwonYun/RecSys-Papers/files/5865104/node2vec.pdf)| | node2vec
 | 2016 | [SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS](https://github.com/SukwonYun/RecSys-Papers/files/5865106/GCN.pdf)| | [GCN](https://github.com/SukwonYun/RecSys-Papers/tree/master/GCN)
-| 2017 | [GRAPH ATTENTION NETWORKS](https://github.com/SukwonYun/RecSys-Papers/files/5865107/GAT.pdf)| | [GAT] (https://github.com/SukwonYun/RecSys-Papers/tree/master/GAT)
+| 2017 | [GRAPH ATTENTION NETWORKS](https://github.com/SukwonYun/RecSys-Papers/files/5865107/GAT.pdf)| | [GAT](https://github.com/SukwonYun/RecSys-Papers/tree/master/GAT)
 | 2015 | [LINE: Large-scale Information Network Embedding](https://github.com/SukwonYun/RecSys-Papers/files/5865108/LINE.pdf)| | LINE
 | 2017 | [metapath2vec: Scalable Representation Learning for Heterogeneous Networks](https://github.com/SukwonYun/RecSys-Papers/files/5865109/metapath2vec.pdf)| | metapath2vec
 | 2019 | [DEEP GRAPH INFOMAX](https://github.com/SukwonYun/RecSys-Papers/files/5865110/DGI.pdf)| | DGI
