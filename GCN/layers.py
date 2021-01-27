@@ -18,6 +18,7 @@ class GraphConvolution(Module):
         self.in_features = in_features
         self.out_features = out_features
         self.weight = Parameter(torch.FloatTensor(in_features, out_features))
+        
         if bias:
             self.bias = Parameter(torch.FloatTensor(out_features))
         else:

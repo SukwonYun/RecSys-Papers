@@ -4,12 +4,13 @@
 import time
 import argparse
 import numpy as np
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils import load_data, accuracy
+from utils import load_data, accuracy, mkdir_p
 from models import GCN
 
 
@@ -56,6 +57,8 @@ if args.cuda:
     idx_val = idx_val.cuda()
     idx_test = idx_test.cuda()
 
+train_losses, train_accs, val_losses, val_accs = [], [], [], []
+    
 def train(epoch):
     start_time = time.time()
     model.train()
@@ -74,13 +77,17 @@ def train(epoch):
     loss_val = F.nll_loss(output[idx_val], labels[idx_val])
     acc_val = accuracy(output[idx_val], labels[idx_val])
     
+    train_losses.append(loss_train.item())
+    train_accs.append(acc_train.item())
+    val_losses.append(loss_val.item())
+    val_accs.append(acc_val.item())
+    
     print('Epoch: {:04d}'.format(epoch+1),
          'loss_train: {:.4f}'.format(loss_train.item()),
           'acc_train: {:.4f}'.format(acc_train.item()),
           'loss_val: {:.4f}'.format(loss_val.item()),
           'acc_val: {:.4f}'.format(acc_val.item()),
           'time: {:.4f}s'.format(time.time()-start_time))
-
 
 
 def test():
@@ -92,6 +99,7 @@ def test():
          'loss= {:.4f}'.format(loss_test.item()),
          'accuracy= {:.4f}'.format(acc_test.item()))
 
+    return acc_test.data.item()
 
 
 #Trainin start
@@ -102,5 +110,34 @@ print('Opimization Finished!!')
 print('Total time spend: {:.4f}s'.format(time.time()- time_total))
 
 #Test
-test()
+acc_test = test()
 
+#Plot
+output_dir = "results/random_seed_" + str(args.seed)
+mkdir_p(output_dir)
+
+fig, ax = plt.subplots()
+ax.plot(train_losses, label = 'train loss')
+ax.plot(val_losses, label = 'validation loss')
+ax.set_xlabel('epochs')
+ax.set_ylabel('cross entropy loss')
+ax.legend()
+
+ax.set(title="Loss Curve of GCN")
+ax.grid()
+
+fig.savefig("results/"+ "random_seed_" + str(args.seed) + "/" + "_loss_curve.png")
+plt.close()
+
+fig, ax = plt.subplots()
+ax.plot(train_accs, label = 'train accuracy')
+ax.plot(val_accs, label = 'validation accuracy')
+ax.set_xlabel('epochs')
+ax.set_ylabel('accuracy')
+ax.legend()
+
+ax.set(title="Accuracy Graph of GCN " + "with Test Accuracy %.4f"%(acc_test))
+ax.grid()
+
+fig.savefig("results/"+ "random_seed_" + str(args.seed) + "/" + "_accuracy.png")
+plt.close()
