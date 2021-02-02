@@ -1,6 +1,5 @@
 # coding: utf-8
 
-
 import numpy as np
 import pandas as pd
 import torch
@@ -10,7 +9,6 @@ from torch.utils.data import DataLoader
 from pathlib import Path
 
 from WD import WideAndDeep
-
 
 class MovieLens1M(torch.utils.data.Dataset):
     """

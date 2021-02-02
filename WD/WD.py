@@ -1,6 +1,5 @@
 # coding: utf-8
 
-
 import torch
 
 from layer import FeaturesLinear, MultiLayerPerceptron, FeaturesEmbedding
