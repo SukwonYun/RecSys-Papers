@@ -4,7 +4,8 @@
 * Data Science and Artificial Intelligence Laboratory, [Homepage](http://dsail.kaist.ac.kr)
 
 ## Subject  
-Recommender System, Graph Embedding  
+Recommender Systems  
+
 ![image](https://user-images.githubusercontent.com/68312164/103968901-1abece80-51a8-11eb-9f6b-1fab04c65bbe.png)  
 
 ## Objective  
