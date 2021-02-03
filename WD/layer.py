@@ -1,4 +1,3 @@
-# coding: utf-8
 
 import numpy as np
 import torch
@@ -11,7 +10,7 @@ class FeaturesLinear(torch.nn.Module):
         self.fc = torch.nn.Embedding(sum(field_dims), output_dim)
         self.bias = torch.nn.Parameter(torch.zeros((output_dim,)))
         self.offsets = np.array((0, *np.cumsum(field_dims)[:-1]), dtype = np.long)
-        
+
     def forward(self, x):
         """
         Parameter
