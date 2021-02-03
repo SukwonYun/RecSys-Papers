@@ -1,12 +1,10 @@
-# coding: utf-8
-
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 
 class FactorizationMachine(torch.nn.Module):
-    
+
     def __init__(self, reduce_sum = True):
         super().__init__()
         self.reduce_sum = reduce_sum
