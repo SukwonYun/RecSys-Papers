@@ -16,8 +16,8 @@ Build Recommender Systems using Graph Embedding Methodology
 | Year | Paper | Blog | Code |
 | :---: | --- | :---: | :---: |
 | 2009 | [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf) | [Suk's](https://sukwonyun.github.io/recommendersystem/Netflix/) | []()
-| 2008 | [Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model](https://dl.acm.org/doi/pdf/10.1145/1401890.1401944) |  | [SVD](https://github.com/SukwonYun/RecSys-Papers/tree/master/SVD)
-| 2008 | [Probabilistic Matrix Factorization](https://papers.nips.cc/paper/2007/file/d7322ed717dedf1eb4e6e52a37ea7bcd-Paper.pdf) |  | [PMF](https://github.com/SukwonYun/RecSys-Papers/tree/master/PMF) 
+| 2008 | [Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model](https://dl.acm.org/doi/pdf/10.1145/1401890.1401944) | [Suk's](https://sukwonyun.github.io/recommendersystem/Neflix2/) | [SVD](https://github.com/SukwonYun/RecSys-Papers/tree/master/SVD)
+| 2008 | [Probabilistic Matrix Factorization](https://papers.nips.cc/paper/2007/file/d7322ed717dedf1eb4e6e52a37ea7bcd-Paper.pdf) | [Suk's](https://sukwonyun.github.io/recommendersystem/PMF/) | [PMF](https://github.com/SukwonYun/RecSys-Papers/tree/master/PMF) 
 | 2008 | [Collaborative Filtering for Implicit Feedback Datasets](https://github.com/SukwonYun/RecSys-Papers/files/5835861/OCCF.pdf)| | OCCF
 | 2012 | [BPR: Bayesian Personalized Ranking from Implicit Feedback](https://github.com/SukwonYun/RecSys-Papers/files/5835858/BPR.pdf)| [Presentation](https://github.com/SukwonYun/RecSys-Papers/files/5835867/BPR_Sukwon.Yun.pdf) | [BPR](https://github.com/SukwonYun/RecSys-Papers/tree/master/BPR)
 | 2017 | [Collaborative Metric Learning](https://github.com/SukwonYun/RecSys-Papers/files/5835860/CML.pdf)| | CML
