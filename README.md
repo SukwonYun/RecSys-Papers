@@ -13,22 +13,25 @@
 | DLRS 2016 | [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792)| [Blog (Korean)](https://sukwonyun.github.io/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C/WideDeep/) | [WD](https://github.com/SukwonYun/RecSys-Papers/tree/master/WD)
 
 ### MF
-<center><img src="https://user-images.githubusercontent.com/68312164/174877853-1c044c56-3d6c-4029-af50-cd455c7e1ce8.png" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884008-efe5b8c1-f6d1-4237-b4c5-97c295922235.png" width="200" height="150"></center>
 
 ### SVD
-<center><img src="https://user-images.githubusercontent.com/68312164/174878843-7228819c-9976-4155-82f6-38304ee7a5ea.png)" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884256-c94f0f2f-14b3-4493-9523-e810b861ba9b.png)" width="200" height="150"></center>
 
 ### PMF
+
 <center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
 
-
 ### BPR
+
 <center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
 
 ### FM
+
 <center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
 
 ### WD
+
 <center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
 
 
