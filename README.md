@@ -16,25 +16,19 @@
 <center><img src="https://user-images.githubusercontent.com/68312164/174884008-efe5b8c1-f6d1-4237-b4c5-97c295922235.png" width="200" height="150"></center>
 
 ### SVD
-<center><img src="https://user-images.githubusercontent.com/68312164/174884256-c94f0f2f-14b3-4493-9523-e810b861ba9b.png)" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884256-c94f0f2f-14b3-4493-9523-e810b861ba9b.png" width="200" height="150"></center>
 
 ### PMF
-
-<center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884394-745ba979-306e-4817-a8dc-232b60c5ab2d.png" width="200" height="150"></center>
 
 ### BPR
-
-<center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884462-de7bb998-c0ad-4000-b8be-9dd15074ec79.png" width="200" height="150"></center>
 
 ### FM
-
-<center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
+<center><img src="https://user-images.githubusercontent.com/68312164/174884594-0802dcd0-79eb-41ca-9516-c4cdd5638674.png" width="200" height="150"></center>
 
 ### WD
-
-<center><img src="https://user-images.githubusercontent.com/68312164/174879007-9a0f77c8-bd1e-4eda-ba04-40518d8bd745.png)" width="200" height="150"></center>
-
-
+<center><img src="https://user-images.githubusercontent.com/68312164/174884719-4bb2c2d4-5c84-4e41-bce1-43c97e8c144c.png" width="200" height="150"></center>
 
 
 ### Library or Useful Resources  
